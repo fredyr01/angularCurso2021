@@ -1,0 +1,25 @@
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <h1>Listado de personas</h1>
+      <button class='btn btn-primary'
+       [disabled]='deshabilitar'
+       (click)='agregarPersona()'
+       >Agregar persona</button>
+       <p>{{mensaje}}</p>
+      <app-persona></app-persona>
+      <label for="">Titulo Persona</label>
+      <!-- todo Esto es usando EVENT BINDING
+        *   <input type="text" class="form-control" 
+        *   (input)='modificarTitulo($event)'>
+        *   {{titulo}} 
+      todo -->
+
+      <!-- todo usando TWO WAY BINDING -->
+      <input type="text" class="form-control"
+        [(ngModel)]='titulo'>
+        {{titulo}}
+
+    </div>
+  </div>
+</div>
